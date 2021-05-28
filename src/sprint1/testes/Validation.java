@@ -47,7 +47,7 @@ public boolean veriftype(String type)
 }
 public boolean verifaction(double montant, double solde)
 {
-return montant > solde;
+return montant <= solde;
 
 }
 }
