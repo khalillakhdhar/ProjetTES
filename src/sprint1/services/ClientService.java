@@ -14,10 +14,11 @@ public class ClientService {
 		this.client = client;
 	}
 
-	public boolean verif(Client cl) {
+	public boolean saveClient(Client cl) {
 		Validation valid = new Validation();
 		if ((valid.verifchaine(cl.getNom()) && (valid.verifmail(cl.getEmail())))
 				&& (valid.verifcode(cl.getCodeapplication())) && (valid.veriftel(cl.getTelephone()))) {
+			System.out.println("ajout avec succés");
 			return true;
 		}
 		return false;
