@@ -76,6 +76,11 @@ public Client(String nom, String prenom, String email, String adresse, String te
 }
 public Client() {
 }
+@Override
+public String toString() {
+	return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
+			+ ", telephone=" + telephone + ", codeapplication=" + codeapplication + ", solde=" + solde + "]";
+}
 
 
 

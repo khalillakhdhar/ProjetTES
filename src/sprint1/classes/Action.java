@@ -41,6 +41,11 @@ public Action(int id_client, String type, double montant) {
 }
 public Action() {
 }
+@Override
+public String toString() {
+	return "Action [id=" + id + ", id_client=" + id_client + ", dateheur=" + dateheur + ", type=" + type + ", montant="
+			+ montant + "]";
+}
 
 
 
