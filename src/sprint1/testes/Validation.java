@@ -31,9 +31,15 @@ return 	tel.startsWith("+");
 }
 public boolean verifcode(int code)
 {
-String verification=String.valueOf(code);
+String verification=String.valueOf(code); //convertir en chaine 
 return verification.startsWith("282");
 
+
+}
+public boolean verifmontant(double montant)
+{
+	return montant> 20;
+	
 
 }
 }
