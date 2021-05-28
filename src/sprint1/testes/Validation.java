@@ -33,8 +33,6 @@ public boolean verifcode(int code)
 {
 String verification=String.valueOf(code); //convertir en chaine 
 return verification.startsWith("282");
-
-
 }
 public boolean verifmontant(double montant)
 {
@@ -42,4 +40,15 @@ public boolean verifmontant(double montant)
 	
 
 }
+public boolean veriftype(String type)
+{
+	return ((type.equals("retrait"))||(type.equals("versement"))) ;
+
 }
+public boolean verifaction(double montant, double solde)
+{
+return montant > solde;
+
+}
+}
+
