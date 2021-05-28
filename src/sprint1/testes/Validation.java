@@ -25,4 +25,15 @@ public boolean verifmail(String mail)
 	}
 	else return false;
 }
+public boolean veriftel(String tel)
+{
+return 	tel.startsWith("+");
+}
+public boolean verifcode(int code)
+{
+String verification=String.valueOf(code);
+return verification.startsWith("282");
+
+
+}
 }
