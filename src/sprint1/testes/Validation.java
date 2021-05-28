@@ -11,4 +11,18 @@ else
 	return false;
 
 }
+public boolean verifchaine(String ch)
+{
+return !ch.isBlank();	
+}
+public boolean verifmail(String mail)
+{
+	if(mail.contains(".")&&(mail.contains("@")))
+	{
+		return true;
+		
+		
+	}
+	else return false;
+}
 }
