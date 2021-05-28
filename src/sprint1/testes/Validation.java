@@ -25,6 +25,7 @@ public boolean verifmail(String mail)
 	}
 	else return false;
 }
+
 public boolean veriftel(String tel)
 {
 return 	tel.startsWith("+");
