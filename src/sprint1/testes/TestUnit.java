@@ -43,8 +43,21 @@ assertFalse(validation.veriftel("20999888"));
 @Test
 public void verifcode()
 {
-assertEquals(true, validation.verifcode(28777666));	
+assertEquals(true, validation.verifcode(282777666));	
 
+}
+@Test
+public void testInt()
+{
+exception.expect(NumberFormatException.class);
+validation.convertInt("200a");
+
+}
+@Test
+public void testDouble()
+{
+exception.expect(NumberFormatException.class);
+validation.convertDouble("200.34a");
 }
 
 }

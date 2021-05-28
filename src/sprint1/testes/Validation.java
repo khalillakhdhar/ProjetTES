@@ -51,5 +51,15 @@ public boolean verifaction(double montant, double solde)
 return montant <= solde;
 
 }
+public int convertInt(String x)
+{
+	return Integer.parseInt(x);
+
+}
+public double convertDouble(String y)
+{
+return Double.parseDouble(y);	
+}
+
 }
 
