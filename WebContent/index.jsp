@@ -14,14 +14,14 @@
     <div class="col">
     </div>
     <div class="col">
-<form>
+<form method="post">
   <div class="mb-3">
     <label for="exampleInputLogin1" class="form-label">Login address</label>
-    <input type="text" name="login" class="form-control" id="exampleInputLogin1" >
+    <input type="text" pattern="[a-z A-Z0-9]{4,30}" required name="login" class="form-control" id="exampleInputLogin1" >
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" required name="password" class="form-control" id="exampleInputPassword1">
   </div>
   
   <button type="submit" class="btn btn-primary">Se connecter</button>
