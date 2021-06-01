@@ -3,6 +3,7 @@ package sprint1.classes.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,6 +69,8 @@ public class UserServlet extends HttpServlet {
 		else
 		{
 			request.setAttribute("erreur","impossible d'ajouter");
+			RequestDispatcher rd= request.getRequestDispatcher("user.jsp");
+			rd.forward(request, response);
 			out.print("impossible d'ajouter");
 		}
 		
