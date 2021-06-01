@@ -69,7 +69,7 @@ public class UserServlet extends HttpServlet {
 		else
 		{
 			request.setAttribute("erreur","impossible d'ajouter");
-			RequestDispatcher rd= request.getRequestDispatcher("user.jsp");
+			RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
 			out.print("impossible d'ajouter");
 		}

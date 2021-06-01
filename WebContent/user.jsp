@@ -21,7 +21,7 @@
   </div>
   <div class="mb-3">
     <label for="prenom" class="form-label">Prenom</label>
-    <input type="text" pattern="[a-z A-Z]{4,30}" required name="prenom" class="form-control" id="prenom">
+    <input type="text" pattern="[a-z A-Z]{4,30}" required name="prenom" class="form-control" id="pr">
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
