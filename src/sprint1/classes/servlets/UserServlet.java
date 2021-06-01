@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import sprint1.classes.Client;
+import sprint1.dao.ClientDao;
+import sprint1.services.ClientService;
 
 /**
  * Servlet implementation class UserServlet
@@ -44,9 +46,6 @@ public class UserServlet extends HttpServlet {
 		String adresse=request.getParameter("adresse");
 		String telephone=request.getParameter("telephone");
 		double code=Double.parseDouble(request.getParameter("code"));
-
-		Client cl=new Client(nom, prenom, email, adresse, telephone, code);
-		cl.setSolde(0);
 		PrintWriter out= response.getWriter();
 		//out.print(cl.toString());
 		
@@ -57,6 +56,25 @@ public class UserServlet extends HttpServlet {
 		// 2 création d'instance de client
 		//alt client valide => afficher un message de succés
 		//alt 2 client invalide => echec
+		Client cl=new Client(nom, prenom, email, adresse, telephone, code);
+		cl.setSolde(0);
+		ClientService cls=new ClientService();
+		ClientDao cld=new ClientDao();
+		if(cls.saveClient(cl))
+		{
+			cld.saveClient(cl);
+			response.sendRedirect("user.jsp");
+		}
+		else
+		{
+			request.setAttribute("erreur","impossible d'ajouter");
+			out.print("impossible d'ajouter");
+		}
+		
+	}
+		
+		
+		
 	}
 
-}
+
