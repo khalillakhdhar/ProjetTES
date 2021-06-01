@@ -15,6 +15,7 @@ System.out.println(client.toString()+ " ajouté avec succés");
 
 
 }
+	
 	public void addclient()
 	{
 		client=new Client("teste", "teste", "teste@gmail.com", "teste ville", "+333788990",282345678, 20000);

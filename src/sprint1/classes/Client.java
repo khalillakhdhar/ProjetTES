@@ -74,6 +74,17 @@ public Client(String nom, String prenom, String email, String adresse, String te
 	this.codeapplication = codeapplication;
 	this.solde = solde;
 }
+
+
+
+public Client(String nom, String prenom, String email, String adresse, String telephone, double codeapplication) {
+	this.nom = nom;
+	this.prenom = prenom;
+	this.email = email;
+	this.adresse = adresse;
+	this.telephone = telephone;
+	this.codeapplication =(int) codeapplication;
+}
 public Client() {
 }
 @Override

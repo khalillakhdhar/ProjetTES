@@ -14,7 +14,7 @@
     <div class="col">
     </div>
     <div class="col">
-<form method="post">
+<form action="UserServlet" method="post">
   <div class="mb-3">
     <label for="exampleInputnom1" class="form-label">nom </label>
     <input type="text" pattern="[a-z A-Z]{4,30}" required name="nom" class="form-control" id="exampleInputnom1" >
@@ -40,7 +40,17 @@
     <input type="text" pattern="[0-9]{8,12}"  required name="code" class="form-control" id="code">
   </div>
   <button type="submit" class="btn btn-primary">Ajouter</button>
-</form>    </div>
+</form>  
+<% if(request.getAttribute("erreur")!=null)
+	{%>
+<div>
+<h3>
+<%=request.getAttribute("erreur") %></h3>
+</div>
+<%
+	}
+%>
+  </div>
     <div class="col">
       
     </div>
