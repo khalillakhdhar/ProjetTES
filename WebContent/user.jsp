@@ -14,7 +14,7 @@
     <div class="col">
     </div>
     <div class="col">
-<form method="post">
+<form action="UserServlet" method="post">
   <div class="mb-3">
     <label for="exampleInputnom1" class="form-label">nom </label>
     <input type="text" pattern="[a-z A-Z]{4,30}" required name="nom" class="form-control" id="exampleInputnom1" >
